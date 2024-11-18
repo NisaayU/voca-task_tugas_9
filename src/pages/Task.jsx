@@ -32,8 +32,8 @@ const Task = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-y-4 sm:gap-4 justify-center items-center sm:grid-cols-4 sm:max-w-5xl">
-      <div className="h-full bg-white flex flex-col justify-center items-center max-w-xs sm:max-w-md px-6 py-8 sm:px-10 sm:py-10 rounded-[20px] space-y-4 shadow-md">
+    <div className="grid grid-cols-1 gap-y-4 sm:gap-4 justify-center items-center sm:grid-cols-4 sm:max-w-5xl ">
+      <div className="h-full bg-white flex flex-col justify-center items-center max-w-xs sm:max-w-md px-6 py-8 sm:px-10 sm:py-10 rounded-[20px] space-y-4 shadow-md hover:border hover:border-purple-500 transition duration-300">
         <img className="w-24 h-24 sm:w-28 sm:h-28 rounded-full hover:scale-105 transition duration-100" src={profileUrl} />
         <h5 className="text-center">
           Welcome Back, <span className="font-semibold">{name}</span>
@@ -60,7 +60,7 @@ const Task = () => {
           </button>
         </Link>
       </div>
-      <div className="bg-white col-span-3 flex flex-col max-w-xs sm:max-w-5xl px-6 py-8 sm:px-10 sm:py-10 rounded-[20px] space-y-12 shadow-md">
+      <div className="bg-white col-span-3 flex flex-col max-w-xs sm:max-w-5xl px-6 py-8 sm:px-10 sm:py-10 rounded-[20px] space-y-12 shadow-md hover:border hover:border-purple-500 transition duration-300">
         <div className="flex space-x-2">
           <input
             type="text"
@@ -82,7 +82,7 @@ const Task = () => {
           {tasks
             .filter((task) => !task.done)
             .map((task) => (
-              <div key={task.id} className="flex justify-between items-center p-4 mb-4 bg-gray-100 text-grey-700 rounded-xl ">
+              <div key={task.id} className="flex justify-between items-center p-4 mb-4 bg-purple-50 text-grey-700 rounded-xl hover:border hover:border-purple-500 transition duration-300">
                 <p className="text-sm font-medium">{task.description}</p>
                 <div className="flex flex-row space-x-2 sm:space-x-4">
                   <button
@@ -120,7 +120,7 @@ const Task = () => {
           {tasks
             .filter((task) => task.done)
             .map((task) => (
-              <div key={task.id} className="flex justify-between items-center p-4 mb-4 bg-purple-50 text-purple-700 rounded-xl ">
+              <div key={task.id} className="flex justify-between items-center p-4 mb-4 bg-purple-200 text-purple-700 rounded-xl ">
                 <p className="text-sm font-medium line-through">{task.description}</p>
               </div>
             ))}

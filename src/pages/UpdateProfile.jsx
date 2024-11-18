@@ -4,7 +4,7 @@ const UpdateProfile = () => {
   const profileUrl = '../../public/profile.jpg';
 
   return (
-    <div className="bg-white w-full sm:max-w-sm md:max-w-md px-6 py-8 sm:px-6 sm:py-8 rounded-[30px] shadow-0 sm:shadow-md space-y-5">
+    <div className="bg-white w-full sm:max-w-sm md:max-w-md px-6 py-8 sm:px-6 sm:py-8 rounded-[30px] shadow-0 sm:shadow-md space-y-5 hover:border hover:border-purple-500 transition duration-300">
       <Link to="/task" className="flex font-medium cursor-pointer hover:scale-102 transition duration-500">
         <svg className="w-6 h-6 text-purple-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="m15 19-7-7 7-7" />
@@ -12,7 +12,7 @@ const UpdateProfile = () => {
         <p>Edit Profile</p>
       </Link>
       <div className="flex flex-col justify-center items-center px-2 sm:px-2">
-        <img className="w-24 h-24 sm:w-28 sm:h-28 rounded-full" src={profileUrl} />
+        <img className="w-24 h-24 sm:w-28 sm:h-28 rounded-full hover:scale-105 transition duration-100" src={profileUrl} />
         <form className="w-full space-y-6 sm:p-2 md:p-4 mt-5 sm:mt-2" action="#">
           <div>
             <label htmlFor="email" className="block mb-2 text-sm font-medium text-purple-900">
